@@ -25,9 +25,6 @@ CONFIG_ROOT = path(os.environ.get('CONFIG_ROOT', ENV_ROOT))
 # prefix.
 CONFIG_PREFIX = SERVICE_VARIANT + "." if SERVICE_VARIANT else ""
 
-for filename in os.listdir(CONFIG_ROOT):
-    log.info("Sentry Module Import Error")
-
 with open(CONFIG_ROOT / CONFIG_PREFIX + "env.json") as env_file:
     ENV_TOKENS = json.load(env_file)
 

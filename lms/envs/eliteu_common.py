@@ -17,7 +17,7 @@ FEATURES.update({
     # enable unicode username
     'ENABLE_UNICODE_USERNAME': True,
 
-    'ENABLE_MKTG_SITE': True,
+    'ENABLE_MKTG_SITE': False,
     # eliteu apps
     # Whether to enable membership
     'ENABLE_MEMBERSHIP_INTEGRATION': False,
