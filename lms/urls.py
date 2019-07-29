@@ -1063,3 +1063,8 @@ if settings.FEATURES.get('ENABLE_PROFESSORS'):
         url(r'', include('professors.urls')),
     ]
 
+# Payments
+if settings.FEATURES.get('ENABLE_PAYMENTS_INTEGRATION', False):
+    urlpatterns += [
+        url(r'', include('payments.urls')),
+    ]

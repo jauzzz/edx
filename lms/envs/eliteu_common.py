@@ -23,7 +23,7 @@ FEATURES.update({
     'ENABLE_MEMBERSHIP_INTEGRATION': True,
 
     # Whether to enable payments
-    'ENABLE_PAYMENTS_INTEGRATION': False,
+    'ENABLE_PAYMENTS_INTEGRATION': True,
 
     # Whether to enable course unenroll
     'ENABLE_COURSE_UNENROLL': False,
@@ -351,3 +351,89 @@ MOBILE_APP_USER_AGENT_REGEXES = ENV_TOKENS.get('MOBILE_APP_USER_AGENT_REGEXES', 
 # Baidu Bridge
 BAIDU_BRIDGE_URL = ENV_TOKENS.get('BAIDU_BRIDGE_URL', '')
 
+ALIPAY_INFO = {
+    "basic_info":{
+        "KEY": "",
+        "PARTNER": "",
+        "SELLER_EMAIL": ""
+    },
+    "other_info":{
+        "INPUT_CHARSET": "",
+        "INPUT_DIRECT_CHARSET": "",
+        "SIGN_TYPE": "",
+        "RETURN_URL": "",
+        "NOTIFY_URL": "",
+        "PAY_RESULT_URL": "",
+        "REFUND_NOTIFY_URL": "",
+        "SHOW_URL": "",
+        "ERROR_NOTIFY_URL": "",
+        "TRANSPORT": "",
+        "DEFAULT_BANK": "",
+        "IT_B_PAY": "",
+        "REFUND_URL": ""
+    }
+}
+
+ALIPAY_APP_INFO = {
+    "basic_info":{
+        "APP_ID": "",
+        "APP_PRIVATE_KEY": "",
+        "ALIPAY_RSA_PUBLIC_KEY": ""
+    },
+    "other_info":{
+        "SIGN_TYPE": "",
+        "NOTIFY_URL": ""
+    }
+}
+
+WECHAT_PAY_INFO = {
+    "basic_info":{
+        "APPID": "",
+        "APPSECRET": "",
+        "MCHID": "",
+        "KEY": "",
+        "ACCESS_TOKEN": ""
+    },
+    "other_info":{
+        "BUY_COURSES_SUCCESS_TEMPLATE_ID": "",
+        "BUY_COURSES_SUCCESS_HREF_URL": "",
+        "COIN_SUCCESS_TEMPLATE_ID": "",
+        "COIN_SUCCESS_HREF_URL": "",
+        "SERVICE_TEL": "",
+        "NOTIFY_URL": "",
+        "JS_API_CALL_URL": "",
+        "SSLCERT_PATH": "",
+        "SSLKEY_PATH": ""
+    }
+}
+
+WECHAT_APP_PAY_INFO = {
+    "basic_info":{
+        "APPID": "",
+        "APPSECRET": "",
+        "MCHID": "",
+        "KEY": "",
+        "ACCESS_TOKEN": ""
+    },
+    "other_info":{
+        "NOTIFY_URL": ""
+    }
+}
+
+WECHAT_H5_PAY_INFO = {
+    "basic_info":{
+        "APPID": "",
+        "APPSECRET": "",
+        "MCHID": "",
+        "KEY": "",
+        "ACCESS_TOKEN": ""
+    },
+    "other_info":{
+        "SERVICE_TEL": "",
+        "NOTIFY_URL": "",
+        "JS_API_CALL_URL": "",
+        "SSLCERT_PATH": "",
+        "SSLKEY_PATH": "",
+        "SPBILL_CREATE_IP": ""
+    }
+}
