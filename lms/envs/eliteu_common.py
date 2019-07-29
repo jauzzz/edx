@@ -352,12 +352,12 @@ MOBILE_APP_USER_AGENT_REGEXES = ENV_TOKENS.get('MOBILE_APP_USER_AGENT_REGEXES', 
 BAIDU_BRIDGE_URL = ENV_TOKENS.get('BAIDU_BRIDGE_URL', '')
 
 ALIPAY_INFO = {
-    "basic_info":{
+    "basic_info": {
         "KEY": "",
         "PARTNER": "",
         "SELLER_EMAIL": ""
     },
-    "other_info":{
+    "other_info": {
         "INPUT_CHARSET": "",
         "INPUT_DIRECT_CHARSET": "",
         "SIGN_TYPE": "",
@@ -375,26 +375,26 @@ ALIPAY_INFO = {
 }
 
 ALIPAY_APP_INFO = {
-    "basic_info":{
+    "basic_info": {
         "APP_ID": "",
         "APP_PRIVATE_KEY": "",
         "ALIPAY_RSA_PUBLIC_KEY": ""
     },
-    "other_info":{
+    "other_info": {
         "SIGN_TYPE": "",
         "NOTIFY_URL": ""
     }
 }
 
 WECHAT_PAY_INFO = {
-    "basic_info":{
+    "basic_info": {
         "APPID": "",
         "APPSECRET": "",
         "MCHID": "",
         "KEY": "",
         "ACCESS_TOKEN": ""
     },
-    "other_info":{
+    "other_info": {
         "BUY_COURSES_SUCCESS_TEMPLATE_ID": "",
         "BUY_COURSES_SUCCESS_HREF_URL": "",
         "COIN_SUCCESS_TEMPLATE_ID": "",
@@ -408,27 +408,27 @@ WECHAT_PAY_INFO = {
 }
 
 WECHAT_APP_PAY_INFO = {
-    "basic_info":{
+    "basic_info": {
         "APPID": "",
         "APPSECRET": "",
         "MCHID": "",
         "KEY": "",
         "ACCESS_TOKEN": ""
     },
-    "other_info":{
+    "other_info": {
         "NOTIFY_URL": ""
     }
 }
 
 WECHAT_H5_PAY_INFO = {
-    "basic_info":{
+    "basic_info": {
         "APPID": "",
         "APPSECRET": "",
         "MCHID": "",
         "KEY": "",
         "ACCESS_TOKEN": ""
     },
-    "other_info":{
+    "other_info": {
         "SERVICE_TEL": "",
         "NOTIFY_URL": "",
         "JS_API_CALL_URL": "",
@@ -437,3 +437,7 @@ WECHAT_H5_PAY_INFO = {
         "SPBILL_CREATE_IP": ""
     }
 }
+
+if FEATURES.get('ENABLE_MEMBERSHIP_INTEGRATION', False):
+    INSTALLED_APPS.append('membership')
+    REST_FRAMEWORK.update({'EXCEPTION_HANDLER': 'membership.utils.customer_exception_handler'})
