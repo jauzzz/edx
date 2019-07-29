@@ -33,6 +33,9 @@ FEATURES.update({
 
 })
 
+DEBUG = True
+DEFAULT_TEMPLATE_ENGINE['OPTIONS']['debug'] = True
+
 MEMBERSHIP_ROOT = REPO_ROOT / "../edx-membership"
 
 sys.path.append(MEMBERSHIP_ROOT)
