@@ -20,7 +20,7 @@ FEATURES.update({
     'ENABLE_MKTG_SITE': False,
     # eliteu apps
     # Whether to enable membership
-    'ENABLE_MEMBERSHIP_INTEGRATION': False,
+    'ENABLE_MEMBERSHIP_INTEGRATION': True,
 
     # Whether to enable payments
     'ENABLE_PAYMENTS_INTEGRATION': False,
